@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Digital Clock</title>
+      </head>
+      <body>
+        <h1>Current Time:</h1>
+        <div id="clock"></div>
+    
+        <script src="script.js"></script>
+      </body>
+    </html>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function getCurrentTime() {
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+  return `${hours}:${minutes}:${seconds}`;
+}
+
+// Update the clock every second
+function updateClock() {
+  const clock = document.getElementById('clock');
+  clock.textContent = getCurrentTime();
+}
+
+// Start the clock
+setInterval(updateClock, 1000);
+
+
+
+    </script>
+    
+</body>
+</html>
